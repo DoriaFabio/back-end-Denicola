@@ -10,10 +10,7 @@ function index(req, res) {
       console.error("Errore durante la query:", err);  // Log dell'errore
       return res.status(500).json({ error: "Database query failed" });
     }
-    res.json({
-      totalCount: results.length,
-      data: results,
-    });
+    res.json({results});
   });
 }
 
